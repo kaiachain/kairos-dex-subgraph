@@ -11,6 +11,7 @@ export enum NETWORK {
   BSC = 'bsc',
   CELO = 'celo',
   ETHEREUM = 'ethereum',
+  KAIA_TESTNET = 'kaia-testnet',
   MATIC = 'matic',
   MONAD = 'monad',
   OPTIMISM = 'optimism',
@@ -19,12 +20,12 @@ export enum NETWORK {
   WORLDCHAIN = 'worldchain-mainnet',
   XLAYER = 'xlayer-mainnet',
   ZKSYNC_ERA = 'zksync-era',
-  ZORA = 'zora-mainnet',
+  ZORA = 'zora-mainnet'
 }
 
 export enum SUBGRAPH_TYPE {
   V3_TOKENS = 'v3-tokens',
-  V3 = 'v3',
+  V3 = 'v3'
 }
 
 const CHAIN_CONSTANTS_FILE_NAME = 'chain.ts'
@@ -38,7 +39,7 @@ export function validateNetwork(network: string): void {
 
   if (
     !Object.values(NETWORK)
-      .map((n) => n.toString())
+      .map(n => n.toString())
       .includes(network)
   ) {
     console.error('invalid network parameter passed, pass either: ', ...Object.values(NETWORK))
@@ -54,7 +55,7 @@ export function validateSubgraphType(subgraphType: string): void {
 
   if (
     !Object.values(SUBGRAPH_TYPE)
-      .map((n) => n.toString())
+      .map(n => n.toString())
       .includes(subgraphType)
   ) {
     console.error('invalid subgraph name parameter passed, pass either: ', ...Object.values(SUBGRAPH_TYPE))
@@ -88,7 +89,7 @@ export function getAlchemyDeploymentParams(): {
   return {
     node: process.env.ALCHEMY_DEPLOY_URL,
     ipfs: process.env.ALCHEMY_IPFS_URL,
-    deployKey: process.env.ALCHEMY_DEPLOY_KEY,
+    deployKey: process.env.ALCHEMY_DEPLOY_KEY
   }
 }
 

@@ -17,9 +17,9 @@ export function getBundle(): Bundle {
 }
 
 export function getFactory(): Factory {
-  let factory = Factory.load(Address.fromString(FACTORY_ADDRESS))
+  let factory = Factory.load(FACTORY_ADDRESS.toHexString())
   if (!factory) {
-    factory = new Factory(Address.fromString(FACTORY_ADDRESS))
+    factory = new Factory(FACTORY_ADDRESS.toHexString())
     factory.poolCount = ZERO_BI
     factory.totalVolumeETH = ZERO_BD
     factory.totalVolumeUSD = ZERO_BD

@@ -16,7 +16,7 @@ import {
 import { loadTransaction } from './utils'
 
 export function handleSwap(event: SwapEvent): void {
-  const factoryAddress = Address.fromString(FACTORY_ADDRESS)
+  const factoryAddress = FACTORY_ADDRESS
 
   const bundle = Bundle.load('1')!
   const factory = Factory.load(factoryAddress.toHexString())!

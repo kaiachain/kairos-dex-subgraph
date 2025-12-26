@@ -16,7 +16,7 @@ import {
 import { loadTransaction } from './utils'
 
 export function handleCollect(event: CollectEvent): void {
-  const factoryAddress = Address.fromString(FACTORY_ADDRESS)
+  const factoryAddress = FACTORY_ADDRESS
 
   const bundle = Bundle.load('1')!
   const pool = Pool.load(event.address)!

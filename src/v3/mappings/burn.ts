@@ -15,7 +15,7 @@ import {
 import { loadTransaction } from './utils'
 
 export function handleBurn(event: BurnEvent): void {
-  const factoryAddress = Address.fromString(FACTORY_ADDRESS)
+  const factoryAddress = FACTORY_ADDRESS
 
   const bundle = Bundle.load('1')!
   const pool = Pool.load(event.address)!

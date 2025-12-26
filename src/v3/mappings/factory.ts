@@ -9,7 +9,7 @@ import { fetchTokenDecimals, fetchTokenName, fetchTokenSymbol, fetchTokenTotalSu
 import { ADDRESS_ZERO, ONE_BI, ZERO_BD, ZERO_BI } from './../../common/constants'
 
 export function handlePoolCreated(event: PoolCreated): void {
-  const factoryAddress = Address.fromString(FACTORY_ADDRESS)
+  const factoryAddress = FACTORY_ADDRESS
   const whitelistTokens = WHITELIST_TOKENS
   const poolsToSkip = SKIP_POOLS
   const poolMappings = POOL_MAPINGS

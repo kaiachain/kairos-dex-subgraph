@@ -16,7 +16,7 @@ import { createTick } from './tick'
 import { loadTransaction } from './utils'
 
 export function handleMint(event: MintEvent): void {
-  const factoryAddress = Address.fromString(FACTORY_ADDRESS)
+  const factoryAddress = FACTORY_ADDRESS
 
   const bundle = Bundle.load('1')!
   const pool = Pool.load(event.address)!
